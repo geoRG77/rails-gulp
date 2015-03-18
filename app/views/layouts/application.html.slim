@@ -8,8 +8,7 @@ html
 
   body class=body_class
     = render 'application/flashes'
-    = yield
+    .container = yield
 
     = javascript_include_tag :application
     = yield :javascript
-
