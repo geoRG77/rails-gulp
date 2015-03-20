@@ -8,10 +8,6 @@ module.exports =
     proxy: 'localhost:3000'
     files: [ './app/views/**' ]
 
-  react:
-    src: sourceFiles + '/javascripts/react/*.jsx'
-    dest: publicAssets + '/javascripts/components'
-
   sass:
     src: sourceFiles + '/stylesheets/**/*.{sass, scss}'
     dest: publicAssets + '/stylesheets'
