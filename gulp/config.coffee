@@ -9,7 +9,7 @@ module.exports =
     files: [ './app/views/**' ]
 
   sass:
-    src: sourceFiles + '/stylesheets/**/*.{sass, scss}'
+    src: sourceFiles + '/stylesheets/**/*.sass'
     dest: publicAssets + '/stylesheets'
     settings:
       indentedSyntax: true
@@ -36,7 +36,8 @@ module.exports =
 
   browserify: bundleConfigs: [ {
     entries: [
-      './node_modules/react/dist/react.js'
+      # import React
+      #'./node_modules/react/dist/react.js'
       sourceFiles + '/javascripts/global.coffee'
     ]
     dest: publicAssets + '/javascripts'

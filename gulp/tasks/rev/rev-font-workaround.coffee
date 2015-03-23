@@ -22,9 +22,9 @@ gulp.task 'rev-font-workaround', [ 'rev-assets' ], ->
   fontList = []
 
   _.each manifest, (reference, key) ->
-    fontPath = config.iconFont.dest.split(config.publicAssets)[1].substr(1)
+    fontPath = config.fontIcons.dest.split(config.publicAssets)[1].substr(1)
 
-    if key.match(fontPath + '/' + config.iconFont.options.fontName)
+    if key.match(fontPath + '/' + config.fontIcons.options.fontName)
       path = key.split('.svg')[0]
       hash = reference.split(path)[1].split('.svg')[0]
 
@@ -40,7 +40,7 @@ gulp.task 'rev-font-workaround', [ 'rev-assets' ], ->
 
     gulp.src(config.publicAssets + '/' + file.path + '*.!(svg)')
       .pipe rename(suffix: file.hash)
-      .pipe gulp.dest(config.iconFont.dest)
+      .pipe gulp.dest(config.fontIcons.dest)
   )
 
   # Re-write rev-manifest.json to disk

@@ -7,7 +7,6 @@ gulp          = require 'gulp'
 handleErrors  = require '../util/handleErrors'
 source        = require 'vinyl-source-stream'
 watchify      = require 'watchify'
-reactify      = require 'reactify'
 
 browserifyTask = (callback, devMode) ->
   bundleQueue = config.bundleConfigs.length

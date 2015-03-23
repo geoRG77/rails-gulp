@@ -16,5 +16,4 @@ tags
 tmp/*
 tmp/**/*
 node_modules
-bower_components
 /public/assets/*
