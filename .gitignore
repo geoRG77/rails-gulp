@@ -15,3 +15,5 @@ rerun.txt
 tags
 tmp/*
 tmp/**/*
+node_modules
+/public/assets/*
